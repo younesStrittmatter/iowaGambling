@@ -117,10 +117,7 @@
                 setTimeout(() => {
                     display_element.innerHTML = ''
                     this.jsPsych.finishTrial(trial_data)
-                }, 1400)
-                //display_element.innerHTML = ''
-                // End trial when response is recorded
-                //this.jsPsych.finishTrial(trial_data);
+                }, 1000)
             };
 
 
@@ -183,7 +180,7 @@ const css_style =
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform 0.4s;
     transform-style: preserve-3d;
     }
     
@@ -191,6 +188,7 @@ const css_style =
     position: absolute;
     width: 100%;
     height: 100%;
+    -moz-backface-visibility: hidden;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
     }
