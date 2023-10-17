@@ -86,6 +86,7 @@
                 inner.appendChild(front)
                 let back = document.createElement('div')
                 back.className += ' card-back'
+                back.id = `iowa-gambling-back-${i}`
                 back.innerText = trial.deck_names[i]
                 back.style.background = trial.deck_colors[i]
                 inner.appendChild(back)
@@ -114,6 +115,11 @@
 
 
                 };
+                setTimeout(() => {
+                    display_element.querySelector("#iowa-gambling-" + i).
+                        style.visibility = 'hidden'
+                },
+                    250)
                 setTimeout(() => {
                     display_element.innerHTML = ''
                     this.jsPsych.finishTrial(trial_data)
