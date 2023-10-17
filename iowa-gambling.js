@@ -116,10 +116,10 @@
 
                 };
                 setTimeout(() => {
-                    display_element.querySelector("#iowa-gambling-" + i).
+                    display_element.querySelector("#iowa-gambling-back-" + i).
                         style.visibility = 'hidden'
                 },
-                    250)
+                    200)
                 setTimeout(() => {
                     display_element.innerHTML = ''
                     this.jsPsych.finishTrial(trial_data)
