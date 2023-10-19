@@ -1,7 +1,5 @@
 (function (jspsych) {
     "use strict";
-
-
     const info = {
         name: 'iowaGambling',
         description: '',
@@ -111,8 +109,6 @@
                     reward: trial.reward_penalty[i][0],
                     penalty: trial.reward_penalty[i][1],
                     chance: trial.chance
-
-
 
                 };
                 setTimeout(() => {
