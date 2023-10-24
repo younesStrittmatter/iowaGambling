@@ -8,7 +8,7 @@
 </head>
 <body></body>
 <script>
-    const TRIALS = 100
+    const TRIALS = 50
     const WIN_CHANCE = .5
     const START_POINTS = 2000
 
@@ -55,6 +55,11 @@
                 },
                 on_finish: (data) => {
                     score = data.score_after
+                    if (data.reward === 50) {
+                        data['type'] = 'safe'
+                    } else {
+                        data['type'] = "risky"
+                    }
                 }
             })
     }

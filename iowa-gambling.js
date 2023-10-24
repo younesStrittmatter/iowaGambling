@@ -109,7 +109,6 @@
                     reward: trial.reward_penalty[i][0],
                     penalty: trial.reward_penalty[i][1],
                     chance: trial.chance
-
                 };
                 setTimeout(() => {
                     display_element.querySelector("#iowa-gambling-back-" + i).
