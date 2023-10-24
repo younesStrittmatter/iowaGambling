@@ -10,7 +10,7 @@
 <script>
     const TRIALS = 50
     const WIN_CHANCE = .5
-    const START_POINTS = 2000
+    const START_POINTS = 200
 
 
     jsPsych = initJsPsych({
@@ -21,10 +21,10 @@
     )
 
     let values = shuffle([
-        [100, -250],
-        [100, -250],
-        [50, -50],
-        [50, -50]
+        [10, -25],
+        [10, -25],
+        [5, -5],
+        [5, -5]
     ])
     let flips = []
     for (let i = 0; i < Math.floor(TRIALS * WIN_CHANCE); i++) {
@@ -55,7 +55,7 @@
                 },
                 on_finish: (data) => {
                     score = data.score_after
-                    if (data.reward === 50) {
+                    if (data.reward === 5) {
                         data['type'] = 'safe'
                     } else {
                         data['type'] = "risky"
