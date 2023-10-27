@@ -20,12 +20,12 @@
         }
     )
 
-    let values = shuffle([
-        [10, -25],
+    let values = [
         [10, -25],
         [5, -5],
-        [5, -5]
-    ])
+        [5, -5],
+        [10, -25]
+    ]
     let flips = []
     for (let i = 0; i < Math.floor(TRIALS * WIN_CHANCE); i++) {
         flips.push(0)
